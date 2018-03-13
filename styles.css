@@ -15,6 +15,11 @@ body, a:link, a:visited, a:active{
   float:right;
   background-color: #555;
 }
+.addLineUpButton{
+  padding:5px 12px;
+  float:left;
+  background-color: #555;
+}
 .topbar{
   height:32px;
   background-color: #555;
