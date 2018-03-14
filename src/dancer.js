@@ -26,4 +26,12 @@ makeDancer.prototype.getRandomInt = function(min, max) {
 
 makeDancer.prototype.addLineUpClass = function() {
   this.$node.addClass('lineUp');
+  // var styleSettings = {
+  //   top: "5%",
+  //   left: "5%"
+  //   // position: 'fixed',
+  //   // animation: 'none'
+  // };
+
+  // $('.lineUp').css(styleSettings);
 }

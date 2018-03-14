@@ -31,9 +31,23 @@ $(document).ready(function() {
   });
 
   $('.addLineUpButton').on('click', function(event) {
+    var top = 100;
+    
     window.dancers.forEach(function(dancer) {
-      dancer.addLineUpClass();
-    })
-  })
+      if (dancer.$node.hasClass('lineUp')){
+        dancer.$node.removeClass('lineUp')
+      } else {
+        dancer.addLineUpClass();
+        dancer.$node.css({top: top, left: 100})
+        top += 50;
+      }
+    });
+  });
 });
 
+    // var top = 100;
+      // var styleSettings = {
+      //   top: top,
+      //   left: 100
+      // };
+      // top += $(window).height() / window.dancers.length;

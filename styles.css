@@ -33,9 +33,21 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .coolDancer{
+  content:url(https://1.bp.blogspot.com/-StwRjRnKcEM/UCB4lEZ2VpI/AAAAAAAACOs/DsXf-7Lw4W0/s320/Angry-Birds.png);
   width:75px;
   height:75px;
-  border-radius: 25px;
-  background-color: blue;
   position:absolute;
+  transition: all .5s linear;
 }
+.pigDancer{
+  content:url(https://vignette.wikia.nocookie.net/angrybirds/images/5/55/Minion_pig_copy.png/revision/latest/scale-to-width-down/508?cb=20130103091743);
+  width:75px;
+  height:75px;
+  position:absolute;
+  transition: all .5s linear;
+}
+/*
+.lineUp{
+  top: 5%;
+  left: 5%;
+};*/
