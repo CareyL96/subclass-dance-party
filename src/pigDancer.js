@@ -8,7 +8,7 @@ makePigDancer.prototype = Object.create(makeDancer.prototype);
 
 makePigDancer.prototype.constructor = makePigDancer;
 
-var oldStep = makePigDancer.prototype.step;
+var oldStep = makeDancer.prototype.step;
 
 makePigDancer.prototype.step = function() {
   // var randomHeight = $('body').height() * Math.random();

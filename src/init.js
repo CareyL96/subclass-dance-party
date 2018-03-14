@@ -31,15 +31,17 @@ $(document).ready(function() {
   });
 
   $('.addLineUpButton').on('click', function(event) {
-    var top = 100;
+    var spacing = $('body').height() / window.dancers.length;
+    var top = $('body').height();
     
     window.dancers.forEach(function(dancer) {
       if (dancer.$node.hasClass('lineUp')){
         dancer.$node.removeClass('lineUp')
+        dancer.step();
       } else {
         dancer.addLineUpClass();
-        dancer.$node.css({top: top, left: 100})
-        top += 50;
+        dancer.$node.css({top: top, left: 100});
+        top -= spacing;
       }
     });
   });

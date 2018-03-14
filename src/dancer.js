@@ -35,3 +35,4 @@ makeDancer.prototype.addLineUpClass = function() {
 
   // $('.lineUp').css(styleSettings);
 }
+

@@ -8,12 +8,16 @@ makeCoolDancer.prototype = Object.create(makeDancer.prototype);
 
 makeCoolDancer.prototype.constructor = makeCoolDancer;
 
-var oldStep = makeCoolDancer.prototype.step;
+var oldStep = makeDancer.prototype.step;
 
 makeCoolDancer.prototype.step = function() {
   // if(!$(".coolDancer").hasClass(".lineUp")) {
-  this.animate();
-  oldStep.call(this);
+  if (this.$node.hasClass('lineUp')) {
+    clearTimeout(oldStep);
+  } else {
+    oldStep.call(this);
+  }
+  this.animate()
   // } 
   // if ($(".coolDancer").hasClass(".lineUp")) {
   //   alert('hasLineUp!')
@@ -33,3 +37,10 @@ makeCoolDancer.prototype.animate = function() {
   });
 }
 
+makeDancer.prototype.killPig = function() {
+  window.dancer.forEach(function(dancer) {
+    var x = $(this).offset().left;
+    var y = $(this).offset().top;
+    console.log(x);
+  });
+}
